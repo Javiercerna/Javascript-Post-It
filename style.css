@@ -1,0 +1,23 @@
+body {
+  background-color: #DDD;
+  font-family: 'Lato', sans-serif;
+}
+
+.post-it {
+  position: absolute;
+  min-width: 200px;
+  min-height: 150px;
+  width: 300px;
+  height: 250px;
+  padding: 20px;
+  background-color: #EE0;
+  text-align: center;
+  overflow: hidden;
+  /* Make resizing smoother */
+  box-sizing: border-box;
+}
+
+.post-it-text {
+  /* Prevent text from horizontal overflow */
+  word-wrap: break-word;
+}

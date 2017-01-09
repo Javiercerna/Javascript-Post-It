@@ -1,6 +1,44 @@
 body {
   background-color: #DDD;
   font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #00C;
+  padding: 20px;
+  text-align: center;
+}
+
+header h2 {
+  color: #FFF;
+  display: inline-block;
+  margin: 0;
+}
+
+header button {
+  float: left;
+}
+
+.container {
+  padding: 20px;
+}
+
+.fab-btn {
+  border: none;
+  font-size: 2em;
+  color: white;
+  background-color: #F00;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  -webkit-box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, .3);
+       -moz-box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, .3);
+            box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, .3);
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 .post-it {

@@ -9,6 +9,10 @@
         options_shown : false
       });
     };
+    this.deletePostIt = function(post_it) {
+      var index = this.post_its.indexOf(post_it);
+      this.post_its.splice(index,1);
+    };
   });
 
 })();

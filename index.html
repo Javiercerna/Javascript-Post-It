@@ -22,7 +22,7 @@
         <div class="post-it-options" ng-show="post_it.show_options">
           <i class="material-icons post-it-edit">&#xE254;</i>
           <i class="material-icons post-it-color">&#xE3B7;</i>
-          <i class="material-icons post-it-delete">&#xE872;</i>
+          <i class="material-icons post-it-delete" ng-click="board.deletePostIt(post_it)">&#xE872;</i>
         </div>
       </div>
       <button class="fab-btn" ng-click="board.addPostIt()">+</button>

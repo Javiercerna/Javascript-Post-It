@@ -6,7 +6,18 @@
     this.addPostIt = function() {
       this.post_its.push({
                  text : 'Change this text by clicking on the edit icon',
-        options_shown : false
+        options_shown : false,
+             editable : false,
+          showOptions : function() {
+            this.options_shown = true;
+          },
+          hideOptions : function() {
+            this.editable = false;
+            this.options_shown = false;
+          },
+         makeEditable : function() {
+           this.editable = true;
+          }
       });
     };
     this.deletePostIt = function(post_it) {

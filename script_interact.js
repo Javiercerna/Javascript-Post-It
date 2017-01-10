@@ -1,4 +1,4 @@
-interact('.post-it').
+interact('.post-it-interact').
   draggable({
     onmove: dragMoveListener
   })

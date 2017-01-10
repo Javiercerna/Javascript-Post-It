@@ -54,6 +54,7 @@ header button {
   overflow: hidden;
   /* Make resizing smoother */
   box-sizing: border-box;
+  cursor: default;
 }
 
 .post-it-text {

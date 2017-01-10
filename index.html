@@ -17,10 +17,10 @@
 
   <section>
     <div class="container">
-      <div class="post-it" ng-repeat="post_it in board.post_its" ng-mouseover="post_it.show_options = true" ng-mouseleave="post_it.show_options = false">
-        <span class="post-it-text">{{post_it.text}}</span>
-        <div class="post-it-options" ng-show="post_it.show_options">
-          <i class="material-icons post-it-edit">&#xE254;</i>
+      <div class="post-it" ng-repeat="post_it in board.post_its" ng-class="{'post-it-interact': !post_it.editable}"  ng-mouseover="post_it.showOptions()" ng-mouseleave="post_it.hideOptions()">
+        <p class="post-it-text" ng-attr-contenteditable="{{post_it.editable}}">{{post_it.text}}</p>
+        <div class="post-it-options" ng-show="post_it.options_shown">
+          <i class="material-icons post-it-edit" ng-click="post_it.makeEditable()">&#xE254;</i>
           <i class="material-icons post-it-color">&#xE3B7;</i>
           <i class="material-icons post-it-delete" ng-click="board.deletePostIt(post_it)">&#xE872;</i>
         </div>

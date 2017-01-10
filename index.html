@@ -21,10 +21,11 @@
         <p class="post-it-text" ng-attr-contenteditable="{{post_it.editable}}">{{post_it.text}}</p>
         <div class="post-it-options" ng-show="post_it.options_shown">
           <i class="material-icons post-it-edit" ng-click="post_it.makeEditable()">&#xE254;</i>
-          <i class="material-icons post-it-color">&#xE3B7;</i>
+          <i class="material-icons post-it-color" onclick="document.getElementById('foo').jscolor.show()">&#xE3B7;</i>
           <i class="material-icons post-it-delete" ng-click="board.deletePostIt(post_it)">&#xE872;</i>
         </div>
       </div>
+      <input id="foo" class="jscolor" value="EEEE00" onchange="update(this.jscolor)">
       <button class="fab-btn" ng-click="board.addPostIt()">+</button>
     </div>
   </section>
@@ -32,6 +33,7 @@
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.8/interact.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.min.js"></script>
   <script src="script_interact.js"></script>
   <script src="app.js"></script>
 </body>

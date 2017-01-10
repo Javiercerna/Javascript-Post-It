@@ -76,3 +76,7 @@ header button {
 .post-it-options .material-icons {
   cursor: default;
 }
+
+.jscolor {
+  display: none;
+}

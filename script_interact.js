@@ -7,6 +7,11 @@ interact('.post-it-interact').
   })
   .on('resizemove', resizeMoveListener);
 
+function update(jscolor) {
+    // 'jscolor' instance can be used as a string
+    document.querySelector('.post-it').style.backgroundColor = '#' + jscolor;
+}
+
 function interactListener(event,event_name)
 {
   var target = event.target,

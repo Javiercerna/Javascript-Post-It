@@ -62,6 +62,10 @@ header button {
   word-wrap: break-word;
 }
 
+.post-it-text[contenteditable="true"] {
+  background-color: #FFF;
+}
+
 .post-it-options {
   position: absolute;
   right: 10px;

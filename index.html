@@ -17,16 +17,16 @@
 
   <section>
     <div class="container">
-      <div class="post-it" ng-repeat="post_it in board.post_its" ng-class="{'post-it-interact': !post_it.editable}"  ng-mouseover="post_it.showOptions()" ng-mouseleave="post_it.hideOptions()">
+      <div class="post-it" ng-repeat="post_it in board.post_its" ng-style="{'background-color': '#' + post_it.color}" ng-class="{'post-it-interact': !post_it.editable}"  ng-mouseover="post_it.showOptions()" ng-mouseleave="post_it.hideOptions()">
         <p class="post-it-text" ng-attr-contenteditable="{{post_it.editable}}">{{post_it.text}}</p>
         <div class="post-it-options" ng-show="post_it.options_shown">
           <i class="material-icons post-it-edit" ng-click="post_it.makeEditable()">&#xE254;</i>
-          <i class="material-icons post-it-color" onclick="document.getElementById('foo').jscolor.show()">&#xE3B7;</i>
+          <i class="material-icons post-it-color" ng-click="post_it.showColorPicker()">&#xE3B7;</i>
           <i class="material-icons post-it-delete" ng-click="board.deletePostIt(post_it)">&#xE872;</i>
         </div>
       </div>
-      <input id="foo" class="jscolor" value="EEEE00" onchange="update(this.jscolor)">
-      <button class="fab-btn" ng-click="board.addPostIt()">+</button>
+      <input class="jscolor" value="EEEE00" ng-change="board.update(this.jscolor)" ng-model="jscolor">
+      <button class="fab-btn" ng-click="board.addPostIt(board)">+</button>
     </div>
   </section>
 

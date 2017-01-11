@@ -78,5 +78,8 @@ header button {
 }
 
 .jscolor {
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }

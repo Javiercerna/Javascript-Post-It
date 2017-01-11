@@ -1,7 +1,18 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #DDD;
   font-family: 'Lato', sans-serif;
-  margin: 0;
+}
+
+#wrapper {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
 }
 
 header {
@@ -20,7 +31,13 @@ header button {
   float: left;
 }
 
+section {
+  flex: 1;
+  display: flex;
+}
+
 .container {
+  flex: 1;
   padding: 20px;
 }
 
